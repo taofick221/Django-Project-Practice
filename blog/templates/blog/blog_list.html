@@ -3,4 +3,12 @@
 
 {%block content%}
 <p>Welcome to my blog  page.100000% off </p>
+<p>Name:{{name}}</p>
+<p>Age:{{age}}</p>
+<p>Skill:{{skill.0}}</p>
+<p>User:{{user.name}}</p>
+<p>User:{{user.age}}</p>
+<p>Blog:{{blog.description|safe}}</p>
+<p>Time:{{blog.created_at}}</p>
+
 {%endblock content%}
