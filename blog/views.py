@@ -7,16 +7,17 @@ class User:
         self.age=age
     
 def home(request):
+    blog=[
+        {"title":"Django","featured":True,"author":"Taofick"},
+        {"title":"python","featured":False,"author":"Taofick"},
+        {"title":"fastapi","featured":False,"author":"Taofick"},
+    ]
     context={
+        "blog":blog,
         "name":"Md taofick",
         "age":23,
         "skill":["python","java","database"],
         "user":User("taofick",23),
-        "blog":{
-            "title":"shop",
-            "description":"<b>Welcome to our shop</b>",
-            "created_at": datetime(2025,11,12,10,12)
-        },
         "empty_value":None,
     }
     return render(request,'blog/blog_list.html',context)

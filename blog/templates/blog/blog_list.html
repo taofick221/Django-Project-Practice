@@ -3,12 +3,26 @@
 
 {%block content%}
 <p>Welcome to my blog  page.100000% off </p>
-<p>Name:{{name}}</p>
-<p>Age:{{age}}</p>
-<p>Skill:{{skill.0}}</p>
-<p>User:{{user.name}}</p>
-<p>User:{{user.age}}</p>
-<p>Blog:{{blog.description|safe}}</p>
-<p>Time:{{blog.created_at}}</p>
+<hr>
+{% if blog.0.featured %}
+<p>Featured blog:{{blog.0.title}}</p>
+{% else %}
+<p>No Featured blog:{{blog.0.title}}</p>
+{% endif %}
+
+<ul>
+   
+        {% for blogs in blog %}
+        <li> {{forloop.counter}}. {{blogs.title}}-{{blogs.author}} </li>
+        {%empty%}
+        <li>No data found</li>
+        {% endfor %}
+        
+   
+</ul>
+
+
+
+
 
 {%endblock content%}
