@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    text-align: center;
+    padding: 10px;
+}
+nav ul{
+    list-style: none;
+    background: bisque;
+    padding: 10px;
+}
+
+nav ul li a{
+    display: inline-block;
+    margin-right: 10px;
+}
+h1{
+    color: aqua;
+}

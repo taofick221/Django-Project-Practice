@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    text-align: center;
+}
+
+/* NAVBAR */
+nav ul{
+    list-style: none;
+    background: bisque;
+    padding: 12px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    background: #333;
+    color: white;
+}
+
+/* HEADING */
+h1{
+    color: #00bcd4;
+    margin-top: 30px;
+}
+
+/* IMAGE FIX SIZE */
+.home-page{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+/* CARD STYLE */
+.content{
+    background: white;
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
