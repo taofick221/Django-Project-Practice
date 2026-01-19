@@ -2,7 +2,7 @@
 {% block content %}
 <section class="contact">
     <h1>Contact Me</h1>
-    <form  method="post">
+    <form action="{% url 'submitcontact' %}" method="POST">
         {% csrf_token %}
         <input type="text" name="name" placeholder="Your name">
         <input type="text" name="email" placeholder="Your email">

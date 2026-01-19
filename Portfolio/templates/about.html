@@ -2,6 +2,33 @@
 {% block content %}
 <section class="about">
     <h1>About page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, non aut sed commodi voluptas accusamus minima corporis inventore dolor tempora iusto ut sapiente recusandae quae perferendis ullam illum, assumenda dignissimos explicabo. Expedita quaerat earum non quasi quibusdam, libero nostrum. Similique.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, non aut sed commodi voluptas accusamus minima corporis inventore dolor 
+        tempora iusto ut sapiente recusandae quae perferendis ullam illum,
+         assumenda dignissimos explicabo. Expedita quaerat earum non quasi
+          quibusdam, libero nostrum. Similique.
+    </p>
+    {% if student %}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stu in student %}
+            <tr>
+                <td>{{stu.name}} </td>
+                <td>{{stu.age}} </td>
+                <td>{{stu.email}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No student data</p>
+    {% endif %}
+        
 </section>
 {% endblock content %}
