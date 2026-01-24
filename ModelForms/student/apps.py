@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ModelformsConfig(AppConfig):
-    name = 'modelforms'
+    name = 'student'

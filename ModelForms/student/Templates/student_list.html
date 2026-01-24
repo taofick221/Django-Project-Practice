@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student list</title>
+</head>
+<body>
+    <h2>All students</h2>
+     {% if messages %} {% for message in messages %}
+    <p class="{{ message.tags }}">{{ message }}</p>
+    {% endfor %} {% endif %}
+    <a href="{% url 'student_create' %}">Add new student</a>
+    <ul>
+        
+        {% for s in students %}
+        <li>
+            <a href="{% url 'student_details' s.pk %}"> {{s.Name}}-{{s.Email}} </a>
+            <a href="{% url 'student_edit' s.pk %}">Edit</a>
+            <a href="{% url 'student_delete' s.pk %}">Delete</a>
+        </li>
+        {% endfor %}    
+       
+    </ul>
+    
+</body>
+</html>
