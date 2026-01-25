@@ -1,0 +1,13 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+<h2>Registration</h2>
+<form method="post">
+    {% csrf_token %}
+    <small>
+        Password must be 8+ characters and include letters, numbers, and a symbol (@ # $).
+    </small>
+    {{form.as_p}}
+    <button type="submit">Register</button>
+</form>
+{% endblock content %}

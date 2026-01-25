@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration/login</title>
+</head>
+<body>
+    {% comment %} error message block---->  {% endcomment %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li> {{message}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% comment %} user authentication block---->  {% endcomment %}
+
+    {% if user.is_authenticated %}
+    Logged ia as {{user.username}} | <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a> | <a href="{% url 'registration' %}">Registration</a>
+    {% endif %}
+    <hr>
+    {% comment %} user profile section---->  {% endcomment %}
+    <a href="{% url 'upload_image' %}">Upload image</a>
+    <a href="{% url 'view_image' %}">View image</a>
+
+
+    {% comment %} content block -----> {% endcomment %}
+
+    <hr>
+    {% block content %}
+    
+    {% endblock content %}
+</body>
+</html>

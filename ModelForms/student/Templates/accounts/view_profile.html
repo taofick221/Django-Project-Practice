@@ -1,0 +1,15 @@
+{% extends "accounts/base.html" %} 
+{% block content %}
+<h2>All profile picture</h2>
+<ul>
+  {% for profile in profiles %}
+  <li>
+    <strong>{{profile.name}}</strong>
+    <hr>
+    <img src="{{profile.image.url}}" width="200">
+</li>
+<a href="{% url 'image_delete' profile.pk %}">Delete</a>
+<hr>
+{% endfor %}
+</ul>
+{% endblock content %}
