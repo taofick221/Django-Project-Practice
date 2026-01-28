@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3 class="bg-light">Post Detail</h3>
+    <hr>
+    <h2>Title: {{post.title}} </h2>
+    <p><strong>Content:</strong> {{post.content}} </p>
+
+    <a href="{% url 'post_list' %}" class="btn btn-secondary">All post</a>
+    <a href="{% url 'post_edit' post.pk %} " class="btn btn-primary">Edit post</a>
+    <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">Delete post</a>
+
+{% endblock content %}
