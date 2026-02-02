@@ -12,4 +12,4 @@ def case_clear(modeladmin,request,queryset):
 @admin.register(YoutubeUser)
 class YoutubeUserAdmin(admin.ModelAdmin):
     list_display=('name','email','subscribe')
-    actions=[case_clear]
+    actions=[case_clear]    
